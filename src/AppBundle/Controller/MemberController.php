@@ -3,9 +3,14 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Member;
+use AppBundle\Entity\Model;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 /**
@@ -148,7 +153,39 @@ class MemberController extends Controller
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('member_delete', array('id' => $member->getId())))
             ->setMethod('DELETE')
+
             ->getForm()
         ;
     }
+
+
+    /**
+     * Lists all member entities.
+     *
+     * @Route("/api/members", name="memberapi_index")
+     * @Method("GET")
+     */
+    public function membersApiAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $members = $em->getRepository('AppBundle:Member')->findAll();
+$list=array();
+foreach ($members as $m)
+{
+    $json = file_get_contents('https://geocoder.ls.hereapi.com/6.2/geocode.json?searchtext='.$m->getPosition().'&gen=9&apiKey=CxxCHigH6e2itFdUuYEJdiNCKYOFT2wwtIF2QxxIjiw');
+    $obj = json_decode($json);
+    $lat=$obj->Response->View[0]->Result[0]->Location->DisplayPosition->Latitude;
+    $long=$obj->Response->View[0]->Result[0]->Location->DisplayPosition->Longitude;
+
+    $model=new Model($m->getId(),$m->getName(),$m->getInformation(),$m->getImage(),$m->getPosition(),$lat,$long);
+   array_push($list,$model);
+}
+
+        $encoder = new JsonEncoder();
+
+        return new JsonResponse($list);
+    }
+    
+
 }

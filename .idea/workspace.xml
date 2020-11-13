@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc8991c9-cd50-40d4-85f3-034c2c326d07" name="Default Changelist" comment="">
+    <list default="true" id="bc8991c9-cd50-40d4-85f3-034c2c326d07" name="Default Changelist" comment="model created">
+      <change afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_11_13_20__5_43_PM.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_11_13_20__5_43_PM.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/member/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/member/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/back/js/plugins.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/back/js/plugins.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/back/js/script.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/back/js/script.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/MemberController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/MemberController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Member.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Member.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,6 +191,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

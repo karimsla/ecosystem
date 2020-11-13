@@ -50,6 +50,8 @@ class Member
      */
     private $Position;
 
+
+
     /**
      * @return string
      */
@@ -153,5 +155,8 @@ class Member
     {
         return $this->image;
     }
+
+
+
 }
 
