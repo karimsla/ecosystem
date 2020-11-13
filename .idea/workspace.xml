@@ -4,6 +4,8 @@
     <list default="true" id="bc8991c9-cd50-40d4-85f3-034c2c326d07" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/member/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/member/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/back/js/plugins.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/back/js/plugins.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/back/js/script.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/back/js/script.min.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +115,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605285670684</updated>
       <workItem from="1605285697367" duration="293000" />
-      <workItem from="1605286026443" duration="15346000" />
+      <workItem from="1605286026443" duration="18585000" />
     </task>
     <task id="LOCAL-00001" summary="initial-commit">
       <created>1605285892188</created>
@@ -157,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605302559913</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="map">
+      <created>1605304443279</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1605304443279</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,7 +181,8 @@
     <MESSAGE value="model created" />
     <MESSAGE value="template add" />
     <MESSAGE value="crud complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="crud complete" />
+    <MESSAGE value="map" />
+    <option name="LAST_COMMIT_MESSAGE" value="map" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605295778965">
@@ -183,10 +193,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="753" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1605287238351" />
-    <state x="885" y="113" key="CommitChangelistDialog2" timestamp="1605302557883">
+    <state x="885" y="113" key="CommitChangelistDialog2" timestamp="1605304441869">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="885" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1605302557883" />
+    <state x="885" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1605304441869" />
     <state x="817" y="396" key="ComposerCompositePathDialog" timestamp="1605286721041">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -219,13 +229,21 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" width="1263" height="711" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605296012288" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1605302562302">
+    <state x="490" y="174" key="StringManipulation.AlignToColumnsAction" timestamp="1605304922144">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605302562302" />
-    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1605291575735">
+    <state x="490" y="174" key="StringManipulation.AlignToColumnsAction/0.0.1920.1040@0.0.1920.1040" timestamp="1605304922144" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1605304444653">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605291575735" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605304444653" />
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1605305433324">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605305433324" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1605304847853">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605304847853" />
   </component>
 </project>

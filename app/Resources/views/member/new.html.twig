@@ -30,62 +30,22 @@
 
                                                 <div class="form-group mb-0">
                                                     <label for="name9">Position</label>
-                                                    <div class="atbd-tag-mode">
 
-                                                        <div class="atbd-tag-mode" data-select2-id="38">
+                                                            <div class="atbd-select-list ">
 
-                                                            <div class="atbd-select " data-select2-id="37">
+                                                                <div class="atbd-select ">
 
-                                                                <select name="select-tag" id="select-tag"
-                                                                        class="form-control select2-hidden-accessible"
-                                                                        multiple="" data-select2-id="select-tag"
-                                                                        tabindex="-1" aria-hidden="true">
-                                                                    <option value="01" data-select2-id="16">Option 1
-                                                                    </option>
-                                                                    <option value="01" data-select2-id="17">Option 1
-                                                                    </option>
-                                                                    <option value="01" data-select2-id="18">Option 1
-                                                                    </option>
-                                                                    <option value="01" data-select2-id="19">Option 1
-                                                                    </option>
-                                                                    <option value="01" data-select2-id="20">Option 1
-                                                                    </option>
-                                                                    <option value="red" data-select2-id="4">red</option>
-                                                                    <option value="green" data-select2-id="5">green
-                                                                    </option>
-                                                                    <option value="blue" data-select2-id="6">blue
-                                                                    </option>
-                                                                </select>
-                                                                <span class="select2 select2-container select2-container--default select2-container--below"
-                                                                      dir="ltr" data-select2-id="7"
-                                                                      style="width: 725.094px;">
-                                                                    <span class="selection">
-                                                                        <span class="select2-selection select2-selection--multiple"
-                                                                              role="combobox" aria-haspopup="true"
-                                                                              aria-expanded="false" tabindex="-1"
-                                                                              aria-disabled="false">
-                                                                            <ul class="select2-selection__rendered"><li
-                                                                                        class="select2-search select2-search--inline"><input
-                                                                                            class="select2-search__field"
-                                                                                            type="search" tabindex="0"
-                                                                                            autocomplete="off"
-                                                                                            autocorrect="off"
-                                                                                            autocapitalize="none"
-                                                                                            spellcheck="false"
-                                                                                            role="searchbox"
-                                                                                            aria-autocomplete="list"
-                                                                                            placeholder="Tags Mode"
-                                                                                            style="width: 372.594px;"></li></ul></span></span><span
-                                                                            class="dropdown-wrapper"
-                                                                            aria-hidden="true"></span></span>
+                                                                    <select name="position" id="select-search" class="form-control " >
+                                                                        <option selected value="">Search position</option>
+
+                                                                    </select>
+
+                                                                </div>
 
                                                             </div>
 
-                                                        </div>
-
                                                     </div>
 
-                                                </div>
 
                                                 <div class="form-group">
                                                     <label for="name2">Member Information</label>
@@ -162,8 +122,32 @@
 
     <script src="{{ asset('back/js/jquery.js') }}"></script>
     <script>
-        $("#rest_position").change(function () {
-            console.log("yooo")
+        $(document).ready(function() {
+            $("#select-search").select2({
+                minimumInputLength: 3,
+
+
+                ajax: {
+                    url: "https://places.ls.hereapi.com/places/v1/suggest?at=34.2568%2C6.9491",
+                    dataType: 'json',
+                    type: "GET",
+                    quietMillis: 50,
+                    data: function (params) {
+                        return {
+                            q: params.term, // search term
+                        apiKey:'sAn5AUk3Mh6JY3JwQUuT0lyFv2vZLksFNfNjQ6YLLuI'
+
+                        };
+                    },
+                    processResults: function (data) {
+                        // Transforms the top-level key of the response object from 'items' to 'results'
+                        console.log(data)
+                        return {
+                            results: data
+                        };
+                }
+
+            });
         });
     </script>
 
