@@ -1,21 +1,111 @@
-{% extends 'base.html.twig' %}
+{% extends 'Dashboard.html.twig' %}
 
 {% block body %}
-    <h1>Member edit</h1>
 
-    {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
-    {{ form_end(edit_form) }}
 
-    <ul>
-        <li>
-            <a href="{{ path('member_index') }}">Back to the list</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+
+
+    <div class="profile-setting ">
+        <div class="container-fluid">
+            <div class="row">
+
+
+                <div class="col-xl-9 col-lg-8 col-sm-7 ml-10">
+                    <div class="as-cover">
+                        <div class="as-cover__imgWrapper">
+                            <input id="file-upload1" type="file" name="fileUpload" class="d-none">
+                            <label for="file-upload1">
+                                <img src="{{ asset("back/img/ap-header.png") }}" alt="image" class="w-100">
+                                <span class="ap-cover__changeImgBtn">
+                                            <span class="btn btn-outline-primary cover-btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                     class="feather feather-camera">
+                                                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                                                    <circle cx="12" cy="13" r="4"></circle></svg>Change
+                                                Cover</span>
+                                        </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-50">
+                        <div class="tab-content" id="v-pills-tabContent">
+                            <div class="tab-pane fade  show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                                <!-- Edit Profile -->
+                                <div class="edit-profile mt-25">
+                                    <div class="card">
+                                        <div class="card-header px-sm-25 px-3">
+                                            <div class="edit-profile__title">
+                                                <h6>Edit Profile</h6>
+                                                <span class="fs-13 color-light fw-400">Set up information</span>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row justify-content-center">
+                                                <div class="col-xl-6 col-lg-8 col-sm-10">
+                                                    <div class="edit-profile__body mx-lg-20">
+                                                          {{ form_start(edit_form) }}
+                                                            <div class="form-group mb-20">
+                                                                <label for="names">name</label>
+
+                                                                {{ form_widget(edit_form.name,{'attr': {'class': 'form-control'}})}}
+
+                                                            </div>
+                                                            <div class="form-group mb-20">
+                                                                <label for="phoneNumber1">Position</label>
+                                                                {{ form_widget(edit_form.Position,{'attr': {'class': 'form-control'}})}}
+
+                                                            </div>
+
+
+                                                            <div class="form-group mb-20">
+                                                                <label for="company1">Information</label>
+                                                                {{ form_widget(edit_form.information,{'attr': {'class': 'form-control'}})}}
+                                                            </div>
+
+                                                            <div class="button-group d-flex flex-wrap pt-30 mb-15">
+
+
+
+                                                                <button type="submit" class="btn btn-primary btn-default btn-squared mr-15 text-capitalize">update profile
+                                                                </button>
+
+
+
+
+
+
+
+
+                                                                <a href="{{ path('member_index') }}" class="btn btn-light btn-default btn-squared fw-400 text-capitalize">cancel
+                                                                </a>
+
+
+
+
+
+                                                            </div>
+                                                        {{ form_end(edit_form) }}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Edit Profile End -->
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
 {% endblock %}

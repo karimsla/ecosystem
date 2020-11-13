@@ -6,6 +6,7 @@ use AppBundle\Entity\Member;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 /**
  * Member controller.
@@ -37,24 +38,45 @@ class MemberController extends Controller
      * @Route("/new", name="member_new")
      * @Method({"GET", "POST"})
      */
-    public function newAction(Request $request)
+    public function newAction(Request $request,ValidatorInterface $validator)
     {
-        $member = new Member();
-        $form = $this->createForm('AppBundle\Form\MemberType', $member);
-        $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
+        if($request->isMethod("GET")){
+            return $this->render('member/new.html.twig');
+        }
+
+
+        $member = new Member();
+        $member->setName($request->get("name"));
+
+        $uploadedFile= $request->files->get('file-upload');
+
+
+
+        $destination = $this->getParameter('kernel.project_dir').'/web/back/img';
+
+
+        $uploadedFile->move(
+            $destination,
+            $uploadedFile->getClientOriginalName());
+
+        $member->setImage($uploadedFile->getClientOriginalName());
+        $member->setInformation($request->get("information"));
+        $member->setPosition($request->get("position"));
+        $errors = $validator->validate($member);
+        if($errors->count()>0){
+            return $this->render('member/new.html.twig',array("errormsg"=>"Verfy entred data"));
+        }
+
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($member);
             $em->flush();
 
-            return $this->redirectToRoute('member_show', array('id' => $member->getId()));
-        }
+            return $this->redirectToRoute('member_index');
 
-        return $this->render('member/new.html.twig', array(
-            'member' => $member,
-            'form' => $form->createView(),
-        ));
+
+
     }
 
     /**
@@ -88,7 +110,7 @@ class MemberController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('member_edit', array('id' => $member->getId()));
+            return $this->redirectToRoute('member_index');
         }
 
         return $this->render('member/edit.html.twig', array(
@@ -106,14 +128,10 @@ class MemberController extends Controller
      */
     public function deleteAction(Request $request, Member $member)
     {
-        $form = $this->createDeleteForm($member);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->remove($member);
-            $em->flush();
-        }
+       if($member!=null){
+           $this->getDoctrine()->getManager()->remove($member);
+           $this->getDoctrine()->getManager()->flush();
+       }
 
         return $this->redirectToRoute('member_index');
     }

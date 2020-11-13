@@ -1,16 +1,116 @@
-{% extends 'base.html.twig' %}
+{% extends 'Dashboard.html.twig' %}
 
 {% block body %}
-    <h1>Member creation</h1>
 
-    {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" value="Create" />
-    {{ form_end(form) }}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Start: product page -->
+                <div class="global-shadow border px-sm-30 py-sm-50 px-0 py-20 bg-white radius-xl w-100 mb-40">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-7 col-lg-10">
+                            <div class="mx-sm-30 mx-20 ">
+                                <!-- Start: card -->
+                                <div class="card add-product p-sm-30 p-20 mb-30">
+                                    <div class="card-body p-0">
+                                        <div class="card-header">
+                                            <h6 class="fw-500">About Member</h6>
+                                        </div>
+                                        <!-- Start: card body -->
+                                        <div class="add-product__body px-sm-40 px-20">
+                                            <!-- Start: form -->
+                                            <form action="{{ path('member_new') }}" method="post" enctype="multipart/form-data">
+                                                <!-- form group -->
+                                                <div class="form-group">
+                                                    <label for="name1">Member name</label>
+                                                    <input type="text" class="form-control" id="name1"
+                                                           placeholder="Name" name="name">
+                                                </div>
 
-    <ul>
-        <li>
-            <a href="{{ path('member_index') }}">Back to the list</a>
-        </li>
-    </ul>
+                                                <div class="form-group mb-0">
+                                                    <label for="name9">Position</label>
+                                                    <input type="text" class="form-control" id="name9"
+                                                           placeholder="Position" name="position">
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label for="name2">Member Information</label>
+                                                    <textarea rows="5" class="form-control" id="name2"
+                                                              placeholder="Information" name="information"></textarea>
+                                                </div>
+
+
+                                                <div class="form-group">
+                                                    <h6 class="fw-500">Member image</h6>
+
+                                                    <!-- Start: product body -->
+                                                    <div class="add-product__body-img px-sm-40 px-20">
+                                                        <label for="upload" class="file-upload__label">
+                                                        <span class="upload-product-img px-10 d-block">
+                                                            <span class="file-upload">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                     height="24" viewBox="0 0 24 24" fill="none"
+                                                                     stroke="currentColor" stroke-width="2"
+                                                                     stroke-linecap="round" stroke-linejoin="round"
+                                                                     class="feather feather-upload"><path
+                                                                            d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline
+                                                                            points="17 8 12 3 7 8"></polyline><line
+                                                                            x1="12" y1="3" x2="12" y2="15"></line></svg>
+                                                                <input id="upload" class="file-upload__input"
+                                                                       type="file" name="file-upload">
+                                                            </span>
+                                                            <span class="pera">Drag and drop an image</span>
+                                                            <span>or <a href="#" class="color-secondary">Browse</a> to choose a
+                                                                file</span>
+                                                        </span>
+                                                        </label>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="button-group add-product-btn d-flex justify-content-end mt-40">
+
+
+                                                    <button type="reset"
+                                                            class="btn btn-light btn-default btn-squared fw-400 text-capitalize">cancel
+                                                    </button>
+
+
+                                                    <button type="submit"
+                                                            class="btn btn-primary btn-default btn-squared text-capitalize">save product
+                                                    </button>
+
+
+                                                </div>
+                                            </form>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <!-- End: button group -->
+                            </div>
+                        </div>
+                        <!-- ends: col-lg-8 -->
+                    </div>
+                </div>
+                <!-- End: Product page -->
+            </div>
+            <!-- ends: col-lg-12 -->
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
 {% endblock %}
