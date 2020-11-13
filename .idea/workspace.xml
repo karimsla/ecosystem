@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc8991c9-cd50-40d4-85f3-034c2c326d07" name="Default Changelist" comment="" />
+    <list default="true" id="bc8991c9-cd50-40d4-85f3-034c2c326d07" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Member.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppBundle/Repository/MemberRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_11_13_20__5_43_PM.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_11_13_20__5_43_PM.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,18 +65,28 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1kF9rITXmiWHo5Dmw55HgstgqqX" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../bin/php/php7.3.12/php.exe" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="symfony doctrine:generate:entity" />
+      <command value="symfony doctrine:schema:update" />
+      <command value="symfony doctrine:schema:update --force" />
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -88,7 +103,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605285670684</updated>
       <workItem from="1605285697367" duration="293000" />
-      <workItem from="1605286026443" duration="25000" />
+      <workItem from="1605286026443" duration="1254000" />
     </task>
     <task id="LOCAL-00001" summary="initial-commit">
       <created>1605285892188</created>
@@ -97,13 +112,21 @@
       <option name="project" value="LOCAL" />
       <updated>1605285892188</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="initial-commit">
+      <created>1605286101859</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605286101859</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
@@ -111,21 +134,53 @@
     <option name="LAST_COMMIT_MESSAGE" value="initial-commit" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="585" y="115" key="CommitChangelistDialog2" timestamp="1605285890660">
+    <state x="753" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1605287238351">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1605285890660" />
+    <state x="753" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1605287238351" />
+    <state x="585" y="115" key="CommitChangelistDialog2" timestamp="1605286099805">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="585" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1605286099805" />
+    <state x="817" y="396" key="ComposerCompositePathDialog" timestamp="1605286721041">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="817" y="396" key="ComposerCompositePathDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605286721041" />
+    <state x="857" y="388" key="FrameworkEditDialogDimensionKey" timestamp="1605286730120">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="857" y="388" key="FrameworkEditDialogDimensionKey/0.0.1920.1040@0.0.1920.1040" timestamp="1605286730120" />
     <state x="837" y="417" key="Github.ShareDialog" timestamp="1605285935674">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="837" y="417" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605285935674" />
-    <state x="461" y="164" key="SettingsEditor" timestamp="1605286052428">
+    <state width="1877" height="233" key="GridCell.Tab.0.bottom" timestamp="1605287279093">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605286052428" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1605285984037">
+    <state width="1877" height="233" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605287279093" />
+    <state width="1877" height="233" key="GridCell.Tab.0.center" timestamp="1605287279093">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605285984037" />
+    <state width="1877" height="233" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605287279093" />
+    <state width="1877" height="233" key="GridCell.Tab.0.left" timestamp="1605287279093">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="233" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605287279093" />
+    <state width="1877" height="233" key="GridCell.Tab.0.right" timestamp="1605287279093">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="233" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605287279093" />
+    <state x="461" y="164" width="1263" height="711" key="SettingsEditor" timestamp="1605286736181">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="164" width="1263" height="711" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605286736181" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1605286126046">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605286126046" />
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1605287278883">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605287278883" />
   </component>
 </project>
