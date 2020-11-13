@@ -1,100 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc8991c9-cd50-40d4-85f3-034c2c326d07" name="Default Changelist" comment="model created">
-      <change afterPath="$PROJECT_DIR$/web/front/css/color.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/css/plugins.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/css/reset.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/fonts/datedropper.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/fonts/datedropper.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/fonts/datedropper.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/fonts/datedropper.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/fonts/fontawesome-webfont-1.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/fonts/lg-1.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/fonts/lg.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/fonts/lg.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/fonts/lg.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/fonts/lg.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/all/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/all/10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/all/12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/all/15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/all/16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/all/18.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/all/19.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/all/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/all/20.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/all/23.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/all/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/all/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/all/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/all/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/all/8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/all/9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/all/single/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/all/single/10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/all/single/11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/all/single/13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/all/single/14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/all/single/15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/all/single/16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/all/single/17.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/all/single/18.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/all/single/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/all/single/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/all/single/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/all/single/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/all/single/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/all/single/7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/all/single/8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/all/single/9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/avatar/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/avatar/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/avatar/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/avatar/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/avatar/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/avatar/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/avatar/avatar-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/bg/12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/bg/29.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/bg/shapes-big.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/bg/shapes-small.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/clients/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/clients/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/clients/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/clouds.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/instagram/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/instagram/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/instagram/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/instagram/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/instagram/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/instagram/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/logo2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/team/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/team/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/team/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/team/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/team/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/team/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/js/map-add.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/js/map_infobox.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/js/maps.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/js/markerclusterer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/js/plugins.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/js/scripts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/maps/api/js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/maps/api/js-1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="bc8991c9-cd50-40d4-85f3-034c2c326d07" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/member/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/member/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/member/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/member/show.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppBundle/Controller/MemberController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppBundle/Form/MemberType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppBundle/Tests/Controller/MemberControllerTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +80,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/front" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/back" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
   </component>
@@ -181,6 +95,7 @@
       <command value="symfony doctrine:generate:entity" />
       <command value="symfony doctrine:schema:update" />
       <command value="symfony doctrine:schema:update --force" />
+      <command value="c dump-autoload" />
       <command value="symfony doctrine:generate:crud" />
     </option>
   </component>
@@ -199,7 +114,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605285670684</updated>
       <workItem from="1605285697367" duration="293000" />
-      <workItem from="1605286026443" duration="3218000" />
+      <workItem from="1605286026443" duration="3622000" />
     </task>
     <task id="LOCAL-00001" summary="initial-commit">
       <created>1605285892188</created>
@@ -222,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605287355037</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="template add">
+      <created>1605289928889</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1605289928889</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,17 +157,18 @@
     </ignored-roots>
     <MESSAGE value="initial-commit" />
     <MESSAGE value="model created" />
-    <option name="LAST_COMMIT_MESSAGE" value="model created" />
+    <MESSAGE value="template add" />
+    <option name="LAST_COMMIT_MESSAGE" value="template add" />
   </component>
   <component name="WindowStateProjectService">
     <state x="753" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1605287238351">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="753" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1605287238351" />
-    <state x="885" y="113" key="CommitChangelistDialog2" timestamp="1605288990196">
+    <state x="885" y="113" key="CommitChangelistDialog2" timestamp="1605289925769">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="885" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1605288990196" />
+    <state x="885" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1605289925769" />
     <state x="817" y="396" key="ComposerCompositePathDialog" timestamp="1605286721041">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -258,33 +181,33 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="837" y="417" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605285935674" />
-    <state width="1877" height="233" key="GridCell.Tab.0.bottom" timestamp="1605289674498">
+    <state width="1877" height="233" key="GridCell.Tab.0.bottom" timestamp="1605290070942">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="233" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605289674498" />
-    <state width="1877" height="233" key="GridCell.Tab.0.center" timestamp="1605289674498">
+    <state width="1877" height="233" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605290070942" />
+    <state width="1877" height="233" key="GridCell.Tab.0.center" timestamp="1605290070942">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="233" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605289674498" />
-    <state width="1877" height="233" key="GridCell.Tab.0.left" timestamp="1605289674498">
+    <state width="1877" height="233" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605290070942" />
+    <state width="1877" height="233" key="GridCell.Tab.0.left" timestamp="1605290070942">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="233" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605289674498" />
-    <state width="1877" height="233" key="GridCell.Tab.0.right" timestamp="1605289674498">
+    <state width="1877" height="233" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605290070942" />
+    <state width="1877" height="233" key="GridCell.Tab.0.right" timestamp="1605290070942">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="233" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605289674498" />
+    <state width="1877" height="233" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605290070942" />
     <state x="461" y="164" width="1263" height="711" key="SettingsEditor" timestamp="1605286736181">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" width="1263" height="711" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605286736181" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1605287358103">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1605289930483">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605287358103" />
-    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1605289674266">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605289930483" />
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1605290070737">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605289674266" />
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605290070737" />
   </component>
 </project>
