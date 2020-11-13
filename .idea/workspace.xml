@@ -4,8 +4,6 @@
     <list default="true" id="bc8991c9-cd50-40d4-85f3-034c2c326d07" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/member/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/member/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/back/js/plugins.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/back/js/plugins.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/back/js/script.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/back/js/script.min.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +113,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605285670684</updated>
       <workItem from="1605285697367" duration="293000" />
-      <workItem from="1605286026443" duration="18585000" />
+      <workItem from="1605286026443" duration="22135000" />
     </task>
     <task id="LOCAL-00001" summary="initial-commit">
       <created>1605285892188</created>
@@ -166,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605304443279</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fk u ajax">
+      <created>1605307681128</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1605307681128</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,7 +187,8 @@
     <MESSAGE value="template add" />
     <MESSAGE value="crud complete" />
     <MESSAGE value="map" />
-    <option name="LAST_COMMIT_MESSAGE" value="map" />
+    <MESSAGE value="fk u ajax" />
+    <option name="LAST_COMMIT_MESSAGE" value="fk u ajax" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605295778965">
@@ -193,10 +199,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="753" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1605287238351" />
-    <state x="885" y="113" key="CommitChangelistDialog2" timestamp="1605304441869">
+    <state x="885" y="113" key="CommitChangelistDialog2" timestamp="1605307679283">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="885" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1605304441869" />
+    <state x="885" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1605307679283" />
     <state x="817" y="396" key="ComposerCompositePathDialog" timestamp="1605286721041">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -233,10 +239,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="490" y="174" key="StringManipulation.AlignToColumnsAction/0.0.1920.1040@0.0.1920.1040" timestamp="1605304922144" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1605304444653">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1605307683669">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605304444653" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605307683669" />
     <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1605305433324">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

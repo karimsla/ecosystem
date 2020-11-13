@@ -129,22 +129,44 @@
 
                 ajax: {
                     url: "https://places.ls.hereapi.com/places/v1/suggest?at=34.2568%2C6.9491",
-                    dataType: 'json',
+
                     type: "GET",
                     quietMillis: 50,
                     data: function (params) {
                         return {
                             q: params.term, // search term
-                        apiKey:'sAn5AUk3Mh6JY3JwQUuT0lyFv2vZLksFNfNjQ6YLLuI'
+                        apiKey:'ddhtiDQZTCVT3Hs_ZOCbwJ-_MChIJzd8ktLWBZxXT74'
 
                         };
                     },
                     processResults: function (data) {
-                        // Transforms the top-level key of the response object from 'items' to 'results'
-                        console.log(data)
+
+                      results="{\n" +
+                          "  \"results\": [\n" +
+                          "    {\n" +
+                          "      \"id\": 1,\n" +
+                          "      \"text\": \"Option 1\"\n" +
+                          "    },\n" +
+                          "    {\n" +
+                          "      \"id\": 2,\n" +
+                          "      \"text\": \"Option 2\",\n" +
+                          "      \"selected\": true\n" +
+                          "    },\n" +
+                          "    {\n" +
+                          "      \"id\": 3,\n" +
+                          "      \"text\": \"Option 3\",\n" +
+                          "      \"disabled\": true\n" +
+                          "    }\n" +
+                          "  ]\n" +
+                          "}"
+
+
+
+
                         return {
-                            results: data
+                            results: results
                         };
+                    },
                 }
 
             });
