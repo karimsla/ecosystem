@@ -10,6 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Form;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Encoder\XmlEncoder;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
@@ -168,22 +169,41 @@ class MemberController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $members = $em->getRepository('AppBundle:Member')->findAll();
-        $list = array();
+        $em = $this->getDoctrine()->getManager();
+        $members=$em->getRepository(Member::class)->findAll();
+
+        $data = array('locations' => array());
+
         foreach ($members as $m) {
-            $json = file_get_contents('https://geocoder.ls.hereapi.com/6.2/geocode.json?searchtext=' . $m->getPosition() . '&gen=9&apiKey=ddhtiDQZTCVT3Hs_ZOCbwJ-_MChIJzd8ktLWBZxXT74');
+            $json = file_get_contents('https://geocoder.ls.hereapi.com/6.2/geocode.json?searchtext=' .urlencode ( $m->getPosition() ) . '&gen=9&apiKey=6gtp5ZqOzoihlDL45DE2usITU94zHz55vlcJ1PScVTs');
             $obj = json_decode($json);
             $lat = $obj->Response->View[0]->Result[0]->Location->DisplayPosition->Latitude;
             $long = $obj->Response->View[0]->Result[0]->Location->DisplayPosition->Longitude;
 
             $model = new Model($m->getId(), $m->getName(), $m->getInformation(), $m->getImage(), $m->getPosition(), $lat, $long);
-            array_push($list, $model);
+            $data['locations'][] = $this->serializeObject($model);
+
         }
 
-        $encoders = [new XmlEncoder(), new JsonEncoder()];
-        $normalizers = [new ObjectNormalizer()];
+        $response = new Response(json_encode($data), 200);
+        $response->headers->set('Content-Type', 'application/json');
+        return $response;
 
-        $serializer = new Serializer($normalizers, $encoders);
-        return new JsonResponse($serializer->serialize($list, "json"));
+    }
+    private function serializeObject(Model $model)
+    {
+
+
+        return array(
+            'id' => $model->getId(),
+            'Name' => $model->getName(),
+            'Information' => $model->getInformation(),
+            'Image' => $model->getImage(),
+            'Position' => $model->getPosition(),
+            'Lat' => $model->getLatitude(),
+            'Long' => $model->getLongitude(),
+
+        );
     }
 
 
