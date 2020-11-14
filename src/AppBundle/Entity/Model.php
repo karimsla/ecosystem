@@ -15,11 +15,8 @@ class Model
     private $longitude;
 
 
-    public function __toString()
-    {
-        // TODO: Implement __toString() method.
-       return $this->getId()." ".$this->getName().' '.$this->getInformation()." ".$this->getImage()." ".$this->getPosition()." ".$this->getLatitude().' '.$this->getLongitude();
-    }
+
+
 
     /**
      * Model constructor.

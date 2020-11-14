@@ -175,7 +175,7 @@ class MemberController extends Controller
         $data = array('locations' => array());
 
         foreach ($members as $m) {
-            $json = file_get_contents('https://geocoder.ls.hereapi.com/6.2/geocode.json?searchtext=' .urlencode ( $m->getPosition() ) . '&gen=9&apiKey=6gtp5ZqOzoihlDL45DE2usITU94zHz55vlcJ1PScVTs');
+            $json = file_get_contents('https://geocoder.ls.hereapi.com/6.2/geocode.json?searchtext=' .urlencode ((string)$m->getPosition()) . '&gen=9&apiKey=6gtp5ZqOzoihlDL45DE2usITU94zHz55vlcJ1PScVTs');
             $obj = json_decode($json);
             $lat = $obj->Response->View[0]->Result[0]->Location->DisplayPosition->Latitude;
             $long = $obj->Response->View[0]->Result[0]->Location->DisplayPosition->Longitude;

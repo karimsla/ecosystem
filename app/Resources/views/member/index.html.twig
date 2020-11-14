@@ -40,19 +40,22 @@
                                                 <div class="form-group">
                                                     <label for="name1">Member name</label>
                                                     <input type="text" class="form-control" id="name1"
-                                                           placeholder="Name">
+                                                           placeholder="Name" name="name">
                                                 </div>
 
-                                                <div class="form-group mb-0">
+                                                <div class="form-group  ">
                                                     <label for="name9">Position</label>
-                                                    <input type="text" class="form-control" id="name9"
-                                                           placeholder="Position">
+
+                                                    <select name="select-search" id="select-search" class="form-control ">
+
+                                                    </select>
+
                                                 </div>
 
                                                 <div class="form-group">
                                                     <label for="name2">Member Information</label>
                                                     <textarea rows="5" class="form-control" id="name2"
-                                                              placeholder="Information"></textarea>
+                                                              placeholder="Information" name="information"></textarea>
                                                 </div>
 
 
@@ -189,8 +192,8 @@
                                     <ul class="orderDatatable_actions mb-0 d-flex flex-wrap">
                                         <li>
                                             <a href="#" id="view_profile"  data-toggle="modal" data-target="#member-profile" class="view"
-                                            data-id="{{ member.id }}" data-name="{{ member.name }}" data-position="{{ member.position }}" data-info="{{ member.information }}"
-                                            data-image="{{ member.image }}">
+                                               data-name="{{ member.name }}" data-position="{{ member.position }}" data-info="{{ member.information }}"
+                                            data-image="">
                                                 <span data-feather="eye"></span></a>
 
                                               </li>
@@ -270,11 +273,16 @@
                                 <div class="ap-img w-100 d-flex justify-content-center">
                                     <!-- Profile picture image-->
                                     <img class="ap-img__main rounded-circle mb-3  wh-120 d-flex bg-opacity-primary"
+
                                          src="{{ asset('back/img/author/profile.png') }}" id="profile_image" alt="profile">
+
                                 </div>
                                 <div class="ap-nameAddress pb-3 pt-1">
+
                                     <h5 class="ap-nameAddress__title" id="profile_name"></h5>
+
                                     <p class="ap-nameAddress__subTitle fs-14 m-0" id="profile_description"></p>
+
                                     <p class="ap-nameAddress__subTitle fs-14 m-0">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin">
                                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
@@ -294,27 +302,86 @@
     <!-- Modal -->
 
     <script src="{{ asset('back/js/jquery.js') }}"></script>
+
+
+
     <script>
-        $("#view_profile").on("click" , function () {
-            var id = $(this).data('id');
-            var name=$(this).data('name');
-            var info=$(this).data('info');
-            var position=$(this).data('position');
-            var img=$(this).data('image')
-            if(img===""){
-                img="tm6.png";
-            }
+        $(document).ready(function () {
+            $('#select-search').select2({
+                ajax: {
+                    url: "https://places.ls.hereapi.com/places/v1/suggest?at=34.2568%2C6.9491",
+                    dataType: 'json',
+                    delay: 250,
+                    data: function (params) {
+                        return {
+                            q: params.term, // search term
+                            apiKey:'REi5vWNKFCyopUUHBrOlVLloRiRVX0fELbuEgVtzQFc'
+                        };
+                    },
+                    processResults: function (data) {
+                        data=data["suggestions"]
+                        res=new Array();
+                        for(i=0;i<data.length;i++){
+                            res.push(data[i])
+                        }
+                        return {
+                            results: $.map(res, function (item) {
 
 
 
-            document.getElementById("profile_description").textContent   = info;
-            document.getElementById("profile_name").textContent   = name;
-            document.getElementById("profile_position").textContent  = position;
 
-            document.getElementById("profile_image").attr("src","back/img/"+img);
-            // As pointed out in comments,
-            // it is unnecessary to have to manually call the modal.
-            // $('#addBookDialog').modal('show');
+                                return {
+                                    text: item,
+
+
+                                    id: item
+                                }
+                            })
+                        };
+                    },
+                    cache: true
+                },
+
+                minimumInputLength: 3,
+                dropdownParent: $('#new-member')
+
+
+            });
         });
+    </script>
+
+    <script>
+        $(document).ready(function (){
+
+            $("#view_profile").on("click" , function () {
+
+
+
+
+                var name=$(this).data('name');
+                var info=$(this).data('info');
+                var position=$(this).data('position');
+                var img=$(this).data('image')
+                if(img===""){
+                    img="tm6.png";
+                }
+
+
+
+
+
+
+                document.getElementById("profile_description").innerHTML    = info;
+                document.getElementById("profile_name").text   = name;
+                document.getElementById("profile_position").innerHTML   = position;
+
+                img="back/img/"+img;
+
+               document.getElementById("profile_image").src="../../"+img;
+
+
+            });
+        })
+
     </script>
 {% endblock %}
