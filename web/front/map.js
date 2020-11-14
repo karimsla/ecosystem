@@ -15,23 +15,13 @@
 // airports variable was injected at the page load
 
 
-startClustering(map, getBubbleContent);
 
-function startClustering(map,getBubbleContent) {
+function startClustering(map,getBubbleContent,data) {
     // First we need to create an array of DataPoint objects,
     // for the ClusterProvider
 
-let data;
 
-    jQuery.when(
-        jQuery.getJSON('/member/api/members')
-    ).done( function(json) {
-        data=json
-        console.log(json)
-    });
-
-
-    var dataPoints = data.map(function (item) {
+   var dataPoints = data.map(function (item) {
       return new H.clustering.DataPoint(item.Lat, item.Long,null,item);
     });
     // Create a clustering provider with custom options for clusterizing the input
@@ -82,9 +72,7 @@ let data;
 
   function onMarkerClick(e) {
 
-
-console.log(e.target.getData());
- // event target is the marker itself, group is a parent event target
+    // event target is the marker itself, group is a parent event target
     // for all objects that it contains
 
     var position = e.target.getGeometry(),
@@ -139,11 +127,19 @@ console.log(e.target.getData());
   function getBubbleContent(data) {
     return [
       '<div class="bubble">',
-   '<span>Your info here</span>',
+        '<img src="/back/img/'+data.Image+'" style="width: 100px;height: 50px" ><br/>',
+       '<b>'+data.Name+'</b><br/>',
+      '<span>'+data.Position+'</span><br/>',
       '</div>'
     ].join('');
   }
+var  ecosys;
+  $.getJSON("/member/api/members",function (result){
+    ecosys=result.locations;
+      }
+  );
+
+$( window ).on( "load", function() { startClustering(map,getBubbleContent,ecosys)})
 
 
-  
   
