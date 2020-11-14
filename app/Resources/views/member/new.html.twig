@@ -31,10 +31,9 @@
                                                 <div class="form-group  ">
                                                     <label for="name9">Position</label>
 
-                                                    <input type="text" class="form-control" id="place"
-                                                           placeholder="Position" name="position">
+                                                    <select name="select-search" id="select-search" class="form-control ">
 
-                                                    </div>
+                                                    </select>
 
 
                                                 <div class="form-group">
@@ -114,7 +113,49 @@
 
 
 
+<script>
+    $(document).ready(function () {
+        $('#select-search').select2({
+            ajax: {
+                url: "https://places.ls.hereapi.com/places/v1/suggest?at=34.2568%2C6.9491",
+                dataType: 'json',
+                delay: 250,
+                data: function (params) {
+                    return {
+                        q: params.term, // search term
+                        apiKey:'6gtp5ZqOzoihlDL45DE2usITU94zHz55vlcJ1PScVTs'
+                    };
+                },
+                processResults: function (data) {
+                    data=data["suggestions"]
+                    res=new Array();
+                    for(i=0;i<data.length;i++){
+                        res.push(data[i])
+                    }
+                    return {
+                        results: $.map(res, function (item) {
 
+
+
+
+                            return {
+                                text: item,
+
+
+                                id: item
+                            }
+                        })
+                    };
+                },
+                cache: true
+            },
+
+            minimumInputLength: 3
+
+
+        });
+    });
+</script>
 
 
 

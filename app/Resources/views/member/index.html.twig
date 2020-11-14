@@ -157,7 +157,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <a href="#" class="profile-image rounded-circle d-block m-0 wh-38" style="background-image:url({{ asset('back/img/tm6.png') }}); background-size: cover;">
+                                            <a href="#" class="profile-image rounded-circle d-block m-0 wh-38" style="background-image:url({{ asset( member.image!=null?'back/img/'~member.image:"back/img/tm6.png" ) }}); background-size: cover;">
 
                                             </a>
                                         </div>

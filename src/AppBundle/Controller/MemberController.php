@@ -4,12 +4,12 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\Member;
 use AppBundle\Entity\Model;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Form\Form;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Encoder\XmlEncoder;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
@@ -46,10 +46,10 @@ class MemberController extends Controller
      * @Route("/new", name="member_new")
      * @Method({"GET", "POST"})
      */
-    public function newAction(Request $request,ValidatorInterface $validator)
+    public function newAction(Request $request, ValidatorInterface $validator)
     {
 
-        if($request->isMethod("GET")){
+        if ($request->isMethod("GET")) {
             return $this->render('member/new.html.twig');
         }
 
@@ -57,11 +57,10 @@ class MemberController extends Controller
         $member = new Member();
         $member->setName($request->get("name"));
 
-        $uploadedFile= $request->files->get('file-upload');
+        $uploadedFile = $request->files->get('file-upload');
 
 
-
-        $destination = $this->getParameter('kernel.project_dir').'/web/back/img';
+        $destination = $this->getParameter('kernel.project_dir') . '/web/back/img';
 
 
         $uploadedFile->move(
@@ -70,19 +69,18 @@ class MemberController extends Controller
 
         $member->setImage($uploadedFile->getClientOriginalName());
         $member->setInformation($request->get("information"));
-        $member->setPosition($request->get("position"));
+        $member->setPosition($request->get("select-search"));
         $errors = $validator->validate($member);
-        if($errors->count()>0){
-            return $this->render('member/new.html.twig',array("errormsg"=>"Verfy entred data"));
+        if ($errors->count() > 0) {
+            return $this->render('member/new.html.twig', array("errormsg" => "Verfy entred data"));
         }
 
 
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($member);
-            $em->flush();
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($member);
+        $em->flush();
 
-            return $this->redirectToRoute('member_index');
-
+        return $this->redirectToRoute('member_index');
 
 
     }
@@ -101,6 +99,21 @@ class MemberController extends Controller
             'member' => $member,
             'delete_form' => $deleteForm->createView(),
         ));
+    }
+
+    /**
+     * Creates a form to delete a member entity.
+     *
+     * @param Member $member The member entity
+     *
+     * @return Form The form
+     */
+    private function createDeleteForm(Member $member)
+    {
+        return $this->createFormBuilder()
+            ->setAction($this->generateUrl('member_delete', array('id' => $member->getId())))
+            ->setMethod('DELETE')
+            ->getForm();
     }
 
     /**
@@ -136,31 +149,13 @@ class MemberController extends Controller
      */
     public function deleteAction(Request $request, Member $member)
     {
-       if($member!=null){
-           $this->getDoctrine()->getManager()->remove($member);
-           $this->getDoctrine()->getManager()->flush();
-       }
+        if ($member != null) {
+            $this->getDoctrine()->getManager()->remove($member);
+            $this->getDoctrine()->getManager()->flush();
+        }
 
         return $this->redirectToRoute('member_index');
     }
-
-    /**
-     * Creates a form to delete a member entity.
-     *
-     * @param Member $member The member entity
-     *
-     * @return \Symfony\Component\Form\Form The form
-     */
-    private function createDeleteForm(Member $member)
-    {
-        return $this->createFormBuilder()
-            ->setAction($this->generateUrl('member_delete', array('id' => $member->getId())))
-            ->setMethod('DELETE')
-
-            ->getForm()
-        ;
-    }
-
 
     /**
      * Lists all member entities.
@@ -173,24 +168,23 @@ class MemberController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $members = $em->getRepository('AppBundle:Member')->findAll();
-    $list=array();
-    foreach ($members as $m)
-{
-    $json = file_get_contents('https://geocoder.ls.hereapi.com/6.2/geocode.json?searchtext='.$m->getPosition().'&gen=9&apiKey=ddhtiDQZTCVT3Hs_ZOCbwJ-_MChIJzd8ktLWBZxXT74');
-    $obj = json_decode($json);
-    $lat=$obj->Response->View[0]->Result[0]->Location->DisplayPosition->Latitude;
-    $long=$obj->Response->View[0]->Result[0]->Location->DisplayPosition->Longitude;
+        $list = array();
+        foreach ($members as $m) {
+            $json = file_get_contents('https://geocoder.ls.hereapi.com/6.2/geocode.json?searchtext=' . $m->getPosition() . '&gen=9&apiKey=ddhtiDQZTCVT3Hs_ZOCbwJ-_MChIJzd8ktLWBZxXT74');
+            $obj = json_decode($json);
+            $lat = $obj->Response->View[0]->Result[0]->Location->DisplayPosition->Latitude;
+            $long = $obj->Response->View[0]->Result[0]->Location->DisplayPosition->Longitude;
 
-    $model=new Model($m->getId(),$m->getName(),$m->getInformation(),$m->getImage(),$m->getPosition(),$lat,$long);
-   array_push($list,$model);
-}
+            $model = new Model($m->getId(), $m->getName(), $m->getInformation(), $m->getImage(), $m->getPosition(), $lat, $long);
+            array_push($list, $model);
+        }
 
         $encoders = [new XmlEncoder(), new JsonEncoder()];
         $normalizers = [new ObjectNormalizer()];
 
         $serializer = new Serializer($normalizers, $encoders);
-        return new JsonResponse($serializer->serialize($list,"json"));
+        return new JsonResponse($serializer->serialize($list, "json"));
     }
-    
+
 
 }
