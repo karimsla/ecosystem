@@ -19,18 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc8991c9-cd50-40d4-85f3-034c2c326d07" name="Default Changelist" comment="workspace">
-      <change afterPath="$PROJECT_DIR$/web/back/img/biat.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/back/img/disruptunisia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/back/img/ecostaff.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/back/img/esprit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/back/img/téléchargement.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/back/img/yunus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/images/map.png" afterDir="false" />
+    <list default="true" id="bc8991c9-cd50-40d4-85f3-034c2c326d07" name="Default Changelist" comment="done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/Front.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/Front.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/MemberController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/MemberController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/front/map.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/front/map.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/front/images/map.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,13 +208,29 @@
       <option name="project" value="LOCAL" />
       <updated>1605324408925</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="done">
+      <created>1605331610775</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1605331610775</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
@@ -236,7 +244,8 @@
     <MESSAGE value="crud complete" />
     <MESSAGE value="map" />
     <MESSAGE value="fk u ajax" />
-    <option name="LAST_COMMIT_MESSAGE" value="fk u ajax" />
+    <MESSAGE value="done" />
+    <option name="LAST_COMMIT_MESSAGE" value="done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605295778965">
@@ -307,9 +316,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="490" y="174" key="StringManipulation.AlignToColumnsAction/0.0.1920.1040@0.0.1920.1040" timestamp="1605304922144" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1605324448484">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="393" y="176" key="Vcs.Push.Dialog.v2" timestamp="1605331616315">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="393" y="176" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1605331616315" />
     <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605324448484" />
     <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1605326338138">
       <screen x="0" y="0" width="1920" height="1040" />
