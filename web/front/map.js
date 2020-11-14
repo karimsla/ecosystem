@@ -7,9 +7,30 @@
  * @param {H.Map} map A HERE Map instance within the application
  * @param {Object[]} data Raw data that contains airports' coordinates
 */
-function startClustering(map,getBubbleContent, data) {
+
+
+
+
+// Step 5: cluster data about airports's coordinates
+// airports variable was injected at the page load
+
+
+startClustering(map, getBubbleContent);
+
+function startClustering(map,getBubbleContent) {
     // First we need to create an array of DataPoint objects,
     // for the ClusterProvider
+
+let data;
+
+    jQuery.when(
+        jQuery.getJSON('/member/api/members')
+    ).done( function(json) {
+        data=json
+        console.log(json)
+    });
+
+
     var dataPoints = data.map(function (item) {
       return new H.clustering.DataPoint(item.Lat, item.Long,null,item);
     });
@@ -123,14 +144,6 @@ console.log(e.target.getData());
     ].join('');
   }
 
-$.getJSON("/member/api/members", function(result){
-  console.log(result.locations);
 
-
-});
-
-// Step 5: cluster data about airports's coordinates
-  // airports variable was injected at the page load
-  startClustering(map, getBubbleContent,airports);
   
   
