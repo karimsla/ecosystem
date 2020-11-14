@@ -28,7 +28,9 @@ class MapController extends Controller
     public function indexAction()
     {
 
-        return $this->render('front/map.html.twig');
+        $members=$this->getDoctrine()->getRepository(Member::class)->findAll();
+
+        return $this->render('front/map.html.twig',array("members"=>$members));
     }
 
 
