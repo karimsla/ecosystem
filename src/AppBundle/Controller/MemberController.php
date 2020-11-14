@@ -11,6 +11,9 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
+use Symfony\Component\Serializer\Encoder\XmlEncoder;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use Symfony\Component\Serializer\Serializer;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 /**
@@ -170,10 +173,10 @@ class MemberController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $members = $em->getRepository('AppBundle:Member')->findAll();
-$list=array();
-foreach ($members as $m)
+    $list=array();
+    foreach ($members as $m)
 {
-    $json = file_get_contents('https://geocoder.ls.hereapi.com/6.2/geocode.json?searchtext='.$m->getPosition().'&gen=9&apiKey=CxxCHigH6e2itFdUuYEJdiNCKYOFT2wwtIF2QxxIjiw');
+    $json = file_get_contents('https://geocoder.ls.hereapi.com/6.2/geocode.json?searchtext='.$m->getPosition().'&gen=9&apiKey=ddhtiDQZTCVT3Hs_ZOCbwJ-_MChIJzd8ktLWBZxXT74');
     $obj = json_decode($json);
     $lat=$obj->Response->View[0]->Result[0]->Location->DisplayPosition->Latitude;
     $long=$obj->Response->View[0]->Result[0]->Location->DisplayPosition->Longitude;
@@ -182,9 +185,11 @@ foreach ($members as $m)
    array_push($list,$model);
 }
 
-        $encoder = new JsonEncoder();
+        $encoders = [new XmlEncoder(), new JsonEncoder()];
+        $normalizers = [new ObjectNormalizer()];
 
-        return new JsonResponse($list);
+        $serializer = new Serializer($normalizers, $encoders);
+        return new JsonResponse($serializer->serialize($list,"json"));
     }
     
 

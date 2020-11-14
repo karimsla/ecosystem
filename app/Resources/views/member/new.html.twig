@@ -28,21 +28,11 @@
                                                            placeholder="Name" name="name">
                                                 </div>
 
-                                                <div class="form-group mb-0">
+                                                <div class="form-group  ">
                                                     <label for="name9">Position</label>
 
-                                                            <div class="atbd-select-list ">
-
-                                                                <div class="atbd-select ">
-
-                                                                    <select name="position" id="select-search" class="form-control " >
-                                                                        <option selected value="">Search position</option>
-
-                                                                    </select>
-
-                                                                </div>
-
-                                                            </div>
+                                                    <input type="text" class="form-control" id="place"
+                                                           placeholder="Position" name="position">
 
                                                     </div>
 
@@ -121,57 +111,6 @@
 
 
     <script src="{{ asset('back/js/jquery.js') }}"></script>
-    <script>
-        $(document).ready(function() {
-            $("#select-search").select2({
-                minimumInputLength: 3,
-
-
-                ajax: {
-                    url: "https://places.ls.hereapi.com/places/v1/suggest?at=34.2568%2C6.9491",
-
-                    type: "GET",
-                    quietMillis: 50,
-                    data: function (params) {
-                        return {
-                            q: params.term, // search term
-                        apiKey:'ddhtiDQZTCVT3Hs_ZOCbwJ-_MChIJzd8ktLWBZxXT74'
-
-                        };
-                    },
-                    processResults: function (data) {
-
-                      results="{\n" +
-                          "  \"results\": [\n" +
-                          "    {\n" +
-                          "      \"id\": 1,\n" +
-                          "      \"text\": \"Option 1\"\n" +
-                          "    },\n" +
-                          "    {\n" +
-                          "      \"id\": 2,\n" +
-                          "      \"text\": \"Option 2\",\n" +
-                          "      \"selected\": true\n" +
-                          "    },\n" +
-                          "    {\n" +
-                          "      \"id\": 3,\n" +
-                          "      \"text\": \"Option 3\",\n" +
-                          "      \"disabled\": true\n" +
-                          "    }\n" +
-                          "  ]\n" +
-                          "}"
-
-
-
-
-                        return {
-                            results: results
-                        };
-                    },
-                }
-
-            });
-        });
-    </script>
 
 
 
