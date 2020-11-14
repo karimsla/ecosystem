@@ -8,11 +8,10 @@
  * @param {Object[]} data Raw data that contains airports' coordinates
 */
 function startClustering(map,getBubbleContent, data) {
-
     // First we need to create an array of DataPoint objects,
     // for the ClusterProvider
     var dataPoints = data.map(function (item) {
-      return new H.clustering.DataPoint(item.latitude, item.longitude,null,item);
+      return new H.clustering.DataPoint(item.Lat, item.Long,null,item);
     });
     // Create a clustering provider with custom options for clusterizing the input
     var clusteredDataProvider = new H.clustering.Provider(dataPoints, {
@@ -123,7 +122,14 @@ console.log(e.target.getData());
       '</div>'
     ].join('');
   }
-  // Step 5: cluster data about airports's coordinates
+
+$.getJSON("/member/api/members", function(result){
+  console.log(result.locations);
+
+
+});
+
+// Step 5: cluster data about airports's coordinates
   // airports variable was injected at the page load
   startClustering(map, getBubbleContent,airports);
   

@@ -19,20 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc8991c9-cd50-40d4-85f3-034c2c326d07" name="Default Changelist" comment="model created">
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/Front.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/front/map.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Controller/MapController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Tests/Controller/MapControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/credentials.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/demo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/demo.details" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/ecosystem-map.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/map.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/front/template.css" afterDir="false" />
+    <list default="true" id="bc8991c9-cd50-40d4-85f3-034c2c326d07" name="Default Changelist" comment="airport">
+      <change afterPath="$PROJECT_DIR$/web/front/js/jquery-3.3.1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/Front.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/Front.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/front/map.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/front/map.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/MemberController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/MemberController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/front/data/airports.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/front/data/airports.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/front/map.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/front/map.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +99,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/back/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/front/js" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -114,6 +108,7 @@
       <recent name="C:\Users\Skill\PhpstormProjects\ecosystem\web\front" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Skill\PhpstormProjects\ecosystem\web\front\js" />
       <recent name="C:\wamp64\www\ecosystem\web\back\js" />
       <recent name="C:\wamp64\www\ecosystem\web\back\css" />
       <recent name="C:\wamp64\www\ecosystem\web\back" />
@@ -203,13 +198,36 @@
       <option name="project" value="LOCAL" />
       <updated>1605307681128</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="model created">
+      <created>1605318328263</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1605318328263</updated>
+    </task>
+    <task id="LOCAL-00010" summary="airport">
+      <created>1605318364856</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1605318364856</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
@@ -218,18 +236,23 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="initial-commit" />
-    <MESSAGE value="model created" />
     <MESSAGE value="template add" />
     <MESSAGE value="crud complete" />
     <MESSAGE value="map" />
     <MESSAGE value="fk u ajax" />
-    <option name="LAST_COMMIT_MESSAGE" value="fk u ajax" />
+    <MESSAGE value="model created" />
+    <MESSAGE value="airport" />
+    <option name="LAST_COMMIT_MESSAGE" value="airport" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605295778965">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605295778965" />
+    <state x="433" y="165" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605318305560">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="433" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1605318305560" />
     <state x="753" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1605287238351">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -282,13 +305,19 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="490" y="174" key="StringManipulation.AlignToColumnsAction/0.0.1920.1040@0.0.1920.1040" timestamp="1605304922144" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1605307683669">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="393" y="176" key="Vcs.Push.Dialog.v2" timestamp="1605318370304">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="393" y="176" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1605318370304" />
     <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605307683669" />
-    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1605305433324">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="500" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605319930297">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="500" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1605319930297" />
+    <state x="438" y="168" width="479" height="474" key="run.anything.popup" timestamp="1605322638239">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="438" y="168" width="479" height="474" key="run.anything.popup/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1605322638239" />
     <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605305433324" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1605304847853">
       <screen x="0" y="0" width="1920" height="1040" />
