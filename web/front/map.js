@@ -19,7 +19,7 @@
 function startClustering(map,getBubbleContent,data) {
     // First we need to create an array of DataPoint objects,
     // for the ClusterProvider
-
+console.log(data);
 
    var dataPoints = data.map(function (item) {
       return new H.clustering.DataPoint(item.Lat, item.Long,null,item);
