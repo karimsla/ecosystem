@@ -1,9 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc8991c9-cd50-40d4-85f3-034c2c326d07" name="Default Changelist" comment="">
+    <list default="true" id="bc8991c9-cd50-40d4-85f3-034c2c326d07" name="Default Changelist" comment="model created">
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/Front.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/front/map.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppBundle/Controller/MapController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppBundle/Tests/Controller/MapControllerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/front/credentials.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/front/demo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/front/demo.details" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/front/ecosystem-map.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/front/map.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/front/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/front/template.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/member/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/member/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/MemberController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/MemberController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +110,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Skill\PhpstormProjects\ecosystem\web\front" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\ecosystem\web\back\js" />
       <recent name="C:\wamp64\www\ecosystem\web\back\css" />
@@ -177,6 +209,9 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <ignored-roots>
@@ -199,6 +234,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="753" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1605287238351" />
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605314894301">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1605314894301" />
     <state x="885" y="113" key="CommitChangelistDialog2" timestamp="1605307679283">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -215,21 +254,25 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="837" y="417" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605285935674" />
-    <state width="1877" height="233" key="GridCell.Tab.0.bottom" timestamp="1605292353413">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1323" height="151" key="GridCell.Tab.0.bottom" timestamp="1605318227687">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="151" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1605318227687" />
     <state width="1877" height="233" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605292353413" />
-    <state width="1877" height="233" key="GridCell.Tab.0.center" timestamp="1605292353412">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1323" height="151" key="GridCell.Tab.0.center" timestamp="1605318227687">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="151" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1605318227687" />
     <state width="1877" height="233" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605292353412" />
-    <state width="1877" height="233" key="GridCell.Tab.0.left" timestamp="1605292353412">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1323" height="151" key="GridCell.Tab.0.left" timestamp="1605318227687">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="151" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1605318227687" />
     <state width="1877" height="233" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605292353412" />
-    <state width="1877" height="233" key="GridCell.Tab.0.right" timestamp="1605292353413">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1323" height="151" key="GridCell.Tab.0.right" timestamp="1605318227687">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="151" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1605318227687" />
     <state width="1877" height="233" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605292353413" />
     <state x="461" y="164" width="1263" height="711" key="SettingsEditor" timestamp="1605296012288">
       <screen x="0" y="0" width="1920" height="1040" />
